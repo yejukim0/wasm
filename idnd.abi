@@ -1,0 +1,536 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "ConfigInfo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "totalFee",
+                    "type": "asset"
+                },
+                {
+                    "name": "tradeFee",
+                    "type": "float64"
+                },
+                {
+                    "name": "lastRewardsUpdate",
+                    "type": "time_point"
+                },
+                {
+                    "name": "lastCouponUpdate",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "CreatorInfo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "tier",
+                    "type": "uint8"
+                },
+                {
+                    "name": "rating",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tradeCounts",
+                    "type": "uint64"
+                },
+                {
+                    "name": "feeCoupon",
+                    "type": "uint8"
+                },
+                {
+                    "name": "lastTradeDate",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "CustomerInfo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "customer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "ProductInfo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "uuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "sellingCounts",
+                    "type": "uint64"
+                },
+                {
+                    "name": "rating",
+                    "type": "uint64"
+                },
+                {
+                    "name": "productName",
+                    "type": "string"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "remixId",
+                    "type": "uint128"
+                },
+                {
+                    "name": "ratio",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "ipfsKey",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfsLink",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "PurchaseHistory",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "uuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "ipfsKey",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfsLink",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "ReviewInfo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "uuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "reviewer",
+                    "type": "name"
+                },
+                {
+                    "name": "rating",
+                    "type": "uint8"
+                },
+                {
+                    "name": "productId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "addproduct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "productName",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfsLink",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfsKey",
+                    "type": "string"
+                },
+                {
+                    "name": "remixId",
+                    "type": "uint128?"
+                },
+                {
+                    "name": "ratio",
+                    "type": "uint64?"
+                }
+            ]
+        },
+        {
+            "name": "approvalbuy",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "approval",
+                    "type": "string"
+                },
+                {
+                    "name": "ipfsKey",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "cancelbuy",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "buyer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "cleantable",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "editprdprice",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "editproduct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "productName",
+                    "type": "string?"
+                },
+                {
+                    "name": "description",
+                    "type": "string?"
+                },
+                {
+                    "name": "status",
+                    "type": "string?"
+                }
+            ]
+        },
+        {
+            "name": "givecoupon",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "giverewards",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "postreview",
+            "base": "",
+            "fields": [
+                {
+                    "name": "reviewer",
+                    "type": "name"
+                },
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "reviewUuid",
+                    "type": "uint128"
+                },
+                {
+                    "name": "rating",
+                    "type": "uint64"
+                },
+                {
+                    "name": "content",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "rmvcreator",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "rmvcustomer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "rmvproduct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "productUuid",
+                    "type": "uint128"
+                }
+            ]
+        },
+        {
+            "name": "rmvreview",
+            "base": "",
+            "fields": [
+                {
+                    "name": "reviewUuid",
+                    "type": "uint128"
+                }
+            ]
+        },
+        {
+            "name": "setcreator",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setcustomer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "customer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "settradefee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "fee",
+                    "type": "float64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addproduct",
+            "type": "addproduct",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "approvalbuy",
+            "type": "approvalbuy",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cancelbuy",
+            "type": "cancelbuy",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cleantable",
+            "type": "cleantable",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "editprdprice",
+            "type": "editprdprice",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "editproduct",
+            "type": "editproduct",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "givecoupon",
+            "type": "givecoupon",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "giverewards",
+            "type": "giverewards",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "postreview",
+            "type": "postreview",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmvcreator",
+            "type": "rmvcreator",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmvcustomer",
+            "type": "rmvcustomer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmvproduct",
+            "type": "rmvproduct",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmvreview",
+            "type": "rmvreview",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcreator",
+            "type": "setcreator",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcustomer",
+            "type": "setcustomer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "settradefee",
+            "type": "settradefee",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "config",
+            "type": "ConfigInfo",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "creators",
+            "type": "CreatorInfo",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "customers",
+            "type": "CustomerInfo",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "products",
+            "type": "ProductInfo",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "purchase",
+            "type": "PurchaseHistory",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "reviews",
+            "type": "ReviewInfo",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
