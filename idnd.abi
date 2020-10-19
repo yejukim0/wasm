@@ -128,10 +128,6 @@
                     "type": "uint64"
                 },
                 {
-                    "name": "creator",
-                    "type": "name"
-                },
-                {
                     "name": "uuid",
                     "type": "uint128"
                 },
@@ -180,6 +176,20 @@
             ]
         },
         {
+            "name": "acptpurchase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "productUuid",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "name": "addproduct",
             "base": "",
             "fields": [
@@ -200,7 +210,7 @@
                     "type": "string"
                 },
                 {
-                    "name": "description",
+                    "name": "ipfsKey",
                     "type": "string"
                 },
                 {
@@ -208,11 +218,11 @@
                     "type": "string"
                 },
                 {
-                    "name": "ipfsKey",
+                    "name": "description",
                     "type": "string"
                 },
                 {
-                    "name": "remixId",
+                    "name": "remixUuid",
                     "type": "uint128?"
                 },
                 {
@@ -222,45 +232,23 @@
             ]
         },
         {
-            "name": "approvalbuy",
-            "base": "",
-            "fields": [
-                {
-                    "name": "productUuid",
-                    "type": "uint128"
-                },
-                {
-                    "name": "buyer",
-                    "type": "name"
-                },
-                {
-                    "name": "approval",
-                    "type": "string"
-                },
-                {
-                    "name": "ipfsKey",
-                    "type": "string"
-                }
-            ]
-        },
-        {
-            "name": "cancelbuy",
-            "base": "",
-            "fields": [
-                {
-                    "name": "productUuid",
-                    "type": "uint128"
-                },
-                {
-                    "name": "buyer",
-                    "type": "name"
-                }
-            ]
-        },
-        {
             "name": "cleantable",
             "base": "",
             "fields": []
+        },
+        {
+            "name": "cnclpurchase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "productUuid",
+                    "type": "string"
+                }
+            ]
         },
         {
             "name": "editprdprice",
@@ -330,6 +318,20 @@
                 },
                 {
                     "name": "content",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "rfspurchase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "productUuid",
                     "type": "string"
                 }
             ]
@@ -407,23 +409,23 @@
     ],
     "actions": [
         {
+            "name": "acptpurchase",
+            "type": "acptpurchase",
+            "ricardian_contract": ""
+        },
+        {
             "name": "addproduct",
             "type": "addproduct",
             "ricardian_contract": ""
         },
         {
-            "name": "approvalbuy",
-            "type": "approvalbuy",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "cancelbuy",
-            "type": "cancelbuy",
-            "ricardian_contract": ""
-        },
-        {
             "name": "cleantable",
             "type": "cleantable",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cnclpurchase",
+            "type": "cnclpurchase",
             "ricardian_contract": ""
         },
         {
@@ -449,6 +451,11 @@
         {
             "name": "postreview",
             "type": "postreview",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rfspurchase",
+            "type": "rfspurchase",
             "ricardian_contract": ""
         },
         {
